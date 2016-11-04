@@ -9,7 +9,7 @@
     "ci": "npm run check && npm test"
   },
   "bin": {
-    "babhushka": "./scripts/babushka.js"
+    "babushka": "./scripts/babushka.js"
   },
   "homepage": "http://github.com/mongodb-js/babushka",
   "repository": {
