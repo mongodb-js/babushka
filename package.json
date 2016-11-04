@@ -1,0 +1,39 @@
+{
+  "name": "babushka",
+  "description": "Recursive style hoisting from nested babushka components.",
+  "version": "0.0.1",
+  "scripts": {
+    "fmt": "mongodb-js-fmt",
+    "check": "mongodb-js-precommit",
+    "test": "mocha",
+    "ci": "npm run check && npm test"
+  },
+  "bin": {
+    "babhushka": "./scripts/babushka.js"
+  },
+  "homepage": "http://github.com/mongodb-js/babushka",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mongodb-js/babushka.git"
+  },
+  "bugs": {
+    "url": "git://github.com/mongodb-js/babushka.git/issues"
+  },
+  "dependencies": {
+    "fs-walk": "^0.0.1",
+    "less": "^2.7.1",
+    "semver": "^5.3.0",
+    "yargs": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint-config-mongodb-js": "^2.2.0",
+    "mocha": "^3.1.2",
+    "mongodb-js-fmt": "^0.0.3",
+    "mongodb-js-precommit": "^0.2.9",
+    "pre-commit": "^1.1.3"
+  },
+  "license": "Apache-2.0",
+  "precommit": [
+    "check"
+  ]
+}

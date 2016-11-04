@@ -1,0 +1,14 @@
+{
+  "env": {
+    "mocha": true,
+    "node": true,
+  },
+  "rules": {
+    "camelcase": 1
+  },
+  "extends": [
+    "mongodb-js/node",
+    "mongodb-js/browser",
+    "mongodb-js/react"
+  ]
+}
