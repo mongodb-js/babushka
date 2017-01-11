@@ -14,9 +14,9 @@ the main less file is processed.
    ```
    "scripts": {
      ...
-     "prepublish": babushka",
-     "pretest": babushka",
-     "prestart": babushka"
+     "prepublish": "babushka",
+     "pretest": "babushka",
+     "prestart": "babushka"
      ...
    }
    ```
@@ -29,6 +29,20 @@ styles of this component. The resulting css file combines the styles of
 this component and all other babushka style dependencies and is written to
 `./lib/styles/index.css`.
 
+## What defines a Babushka Component
+
+There are two ways to declare a component to be _babushka_ compatible.
+
+1. It has the `babushka` package as a true dependency (note, devDependency is not enough), or
+2. it has a `"babushka": true` entry in its package.json
+
+Use 2. if the component is a leaf of your dependency tree, i.e. the smallest
+possible component that does not itself require other babushka components.
+Otherwise use 1.
+
+Note: If your component is only a consumer of babushka components (e.g. your
+main application, that doesn't get required itself), you may also add `babushka`
+as a devDependency.
 
 ## License
 
